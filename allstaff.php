@@ -2,20 +2,41 @@
 
 $allUsers = scandir("db/users/");
 	$countAllUsers = count($allUsers);
+	
 
 	for($counter = 0; $counter < $countAllUsers; $counter++) {
+		if($allUsers[$counter] !=="." && $allUsers[$counter] !==".."){
 
-		$currentUser = $allUsers[$counter];
+				$currentUser = $allUsers[$counter];
 
-			$users = explode("___", file_get_contents("db/users/".$currentUser));
+			$users = file("db/users/".$currentUser);
 
-echo "<table>";
+//echo $users;'      '
 
-foreach ($users as $content) {
-	echo "<tr><td>" .$content."</td></tr>";
+
+
+foreach ($users as $users_file => $user) {
+
+
+echo "<table>
+<tr>
+<th>FIRST NAME</th>
+<th>LAST NAME</th>
+</tr>";
+
+
+	echo '<tr>
+	<td>'.$user["email"].'</td>
+
+	</tr>';
 	
 }
 echo "</table>";
+
+}
+	
+
+
 
 }
 ?>
