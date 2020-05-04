@@ -4,8 +4,8 @@
  ?>
 
 
-		<h3>Register</h3>
-		<p><strong>Welcome, please register</strong></p>
+		<h3>Payment</h3>
+		<p><strong>Welcome, Kindly Make your Payment</strong></p>
 		<p>All Fields are required</p>
 
 		<form method="POST" action="processbill.php">

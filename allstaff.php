@@ -1,5 +1,7 @@
 <?php
 
+
+
 $allUsers = scandir("db/users/");
 	$countAllUsers = count($allUsers);
 	
@@ -10,6 +12,8 @@ $allUsers = scandir("db/users/");
 				$currentUser = $allUsers[$counter];
 
 			$users = file("db/users/".$currentUser);
+
+print_r($users) ;
 
 //echo $users;'      '
 
@@ -26,7 +30,7 @@ echo "<table>
 
 
 	echo '<tr>
-	<td>'.$user["email"].'</td>
+	<td>'.$user.'</td>
 
 	</tr>';
 	

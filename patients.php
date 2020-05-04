@@ -19,7 +19,8 @@ if(!isset($_SESSION["LoggedIn"])){
 
 
 			<a href="bill.php">Pay Bill,</a>
-			<a href="book.php">Book Appointment</a>
+			<a href="book.php"> Book Appointment,</a>
+			<a href="patientbill.php">View Transaction History</a>
 		patients
 
 <?php include_once("footer.php"); ?>

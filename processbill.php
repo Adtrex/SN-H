@@ -13,6 +13,34 @@ $_SESSION["last_name"] = $last_name;
 $_SESSION["email"] = $email;
 $_SESSION["bill"] = $bill;
 
+
+
+if ($errorCount > 0) {
+  //Display proper messages to the user
+  //Give more accurate feedback to the user
+   $_SESSION["error"] = "You have " . $errorCount . " errors in your form submission";
+   header("Location: bill.php");
+}else{
+
+  
+
+
+
+
+  $userObject =[
+    'first_name'=>$first_name,
+    'last_name'=>$last_name,
+    'email'=>$email,
+    'bill'=>$bill,
+
+
+  ];
+
+  file_put_contents("db/bill/".$email . ".json", json_encode($userObject));
+
+
+
+
 $refno = "";
 
 			$alphabets = ['a','b','c','d','e','f','g','h','A','B','C','D','E','F','G','H'];
@@ -79,5 +107,5 @@ header('Location: ' . $transaction->data->link);
 
 
 }
-
+}
 ?>

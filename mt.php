@@ -17,6 +17,7 @@ if(!isset($_SESSION["LoggedIn"])){
 <h3>DASHBOARD</h3>
 		LoggedIn User ID: <?php echo $_SESSION['LoggedIn'] ?>	
 		Welcome, <?php echo $_SESSION["full_name"] ?>, You are logged in as (<?php echo $_SESSION["role"] ?>), and your ID is <?php echo $_SESSION["LoggedIn"] ?>;
+		<a href="allbill.php">View all Payments</a>
 
 
 	
