@@ -45,20 +45,18 @@ $bill = $_SESSION["bill"];
 
         	
 
-			$subject = "Bill payment Successful";
+			/*$subject = "Bill payment Successful";
 			$message = "You have successfully made your payment";
 			$headers = "From: no-reply@snh.org" . "\r\n" . 
 			"CC: tolu@snh.org";
-			$try = mail($email,$subject,$message,$headers);
+			$try = mail($email,$subject,$message,$headers);*/
 
 			header("Location: billpaid.php");
 
 
         } else {
-            header("Location: billpaid.php");
+            header("Location: billfail.php");
         }
     }
-        else {
-      die('No reference supplied');
-    }
+
 ?>

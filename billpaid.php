@@ -9,5 +9,13 @@
 
 
 	<?php
+			/*$email = $_SESSION["email"];
+
+			$subject = "Bill payment Successful";
+			$message = "You have successfully made your payment";
+			$headers = "From: no-reply@snh.org" . "\r\n" . 
+			"CC: tolu@snh.org";
+			$try = mail($email,$subject,$message,$headers);*/
+
 	include_once("footer.php");
 	?>
